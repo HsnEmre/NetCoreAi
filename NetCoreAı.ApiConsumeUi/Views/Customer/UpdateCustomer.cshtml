@@ -1,0 +1,47 @@
+﻿@using NetCoreAı.ApiConsumeUi.Dtos
+@model GetByIdCustomerDto
+
+@{
+    ViewData["Title"] = "Müşteri Güncelle";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-warning">
+        <div class="card-header bg-warning text-dark">
+            <h4 class="mb-0"><i class="fas fa-edit"></i> Müşteri Bilgilerini Güncelle</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" asp-action="UpdateCustomer" asp-controller="Customer">
+
+                @* KRİTİK NOKTA: ID'yi gizli olarak gönderiyoruz *@
+                <input type="hidden" name="customerId" value="@Model.customerId" />
+
+                <div class="form-group mb-3">
+                    <label class="form-label fw-bold">Müşteri Adı</label>
+                    <input type="text" class="form-control" name="customerName"
+                           value="@Model.customerName" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label fw-bold">Müşteri Soyadı</label>
+                    <input type="text" class="form-control" name="custormerSurName"
+                           value="@Model.custormerSurName" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="form-label fw-bold">Güncel Bakiye</label>
+                    <input type="number" class="form-control" name="customerBalance"
+                           value="@Model.customerBalance" step="0.01" required />
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary px-4">
+                        <i class="fas fa-save"></i> Değişiklikleri Kaydet
+                    </button>
+                    <a href="/Customer/CustomerList" class="btn btn-outline-secondary px-4">Listeye Dön</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

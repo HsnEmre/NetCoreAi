@@ -1,0 +1,49 @@
+﻿@using NetCoreAı.ApiConsumeUi.Dtos
+@model List<ResultCustomerDto>
+
+@{
+    ViewData["Title"] = "Müşteri Listesi";
+    // Layout = "~/Views/Shared/_Layout.cshtml"; // Layout kullanmıyorsan burayı silebilirsin
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Müşteri Listesi</h2>
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>Müşteri Adı</th>
+                <th>Soyadı</th>
+                <th>Şehir</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.customerId</td> @* DTO içindeki property isimlerine göre güncelle *@
+                        <td>@item.customerName</td>
+                        <td>@item.custormerSurName</td>
+                        <td>@item.customerBalance</td>
+                        <td>
+                            <a href="/Customer/UpdateCustomer/@item.customerId" class="btn btn-warning btn-sm">Güncelle</a>
+                            <a href="/Customer/DeleteCustomer/@item.customerId" class="btn btn-danger btn-sm">Sil</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" class="text-center">Listelenecek veri bulunamadı.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Customer/CreateCustomer/" class="btn btn-primary">Yeni Müşteri Ekle</a>
+</div>
