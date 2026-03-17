@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36717.8 d17.14
+VisualStudioVersion = 17.14.36717.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDemo", "ApiDemo\ApiDemo.csproj", "{11196DEB-ABB6-4A7A-A957-8315297BF844}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreAi.RapidConsume", "NetCoreAi.RapidConsume\NetCoreAi.RapidConsume.csproj", "{FC497000-1FFC-49B6-BEBF-63AB33DAFE8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreAi.OpenAiChat", "NetCoreAi.OpenAiChat\NetCoreAi.OpenAiChat.csproj", "{E56BC609-9F2A-43BD-9349-823C9BCC238C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreAi.WhispeSpeechToText", "NetCoreAi.WhispeSpeechToText\NetCoreAi.WhispeSpeechToText.csproj", "{E2D50240-0B7B-4B47-B619-C6B680216DBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E56BC609-9F2A-43BD-9349-823C9BCC238C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E56BC609-9F2A-43BD-9349-823C9BCC238C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E56BC609-9F2A-43BD-9349-823C9BCC238C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D50240-0B7B-4B47-B619-C6B680216DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D50240-0B7B-4B47-B619-C6B680216DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D50240-0B7B-4B47-B619-C6B680216DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D50240-0B7B-4B47-B619-C6B680216DBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
