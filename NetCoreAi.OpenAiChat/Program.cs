@@ -13,7 +13,7 @@ class Program
         var promt = Console.ReadLine();
 
         using var client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Authorization", $"Bearer ");
+        client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apikey}");
 
         var requestbody = new
         {
@@ -23,7 +23,7 @@ class Program
                 new {role="system",content="You are a helpful asistant"},
                 new {role="user",content=promt},
             },
-            max_tokens = 100
+            max_tokens = 500
         };
 
         var json = JsonSerializer.Serialize(requestbody);
@@ -32,7 +32,7 @@ class Program
 
         try
         {
-            var response = await client.PostAsync("https://ap.openai.com/v1/chat/completions", content);
+            var response = await client.PostAsync("https://api.openai.com/v1/chat/completions", content);
             var responseString = await response.Content.ReadAsStringAsync();
 
             if (response.IsSuccessStatusCode)
@@ -55,5 +55,5 @@ class Program
             Console.WriteLine($"an error occured {ex.Message}");
         }
     }
-
+    
 }
