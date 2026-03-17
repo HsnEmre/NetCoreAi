@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreAi.OpenAiChat", "Net
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreAi.WhispeSpeechToText", "NetCoreAi.WhispeSpeechToText\NetCoreAi.WhispeSpeechToText.csproj", "{E2D50240-0B7B-4B47-B619-C6B680216DBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreAi.DalleImageGeneration", "NetCoreAi.DalleImageGeneration\NetCoreAi.DalleImageGeneration.csproj", "{7A422649-9395-4CFF-B71C-8543F7EA8DD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E2D50240-0B7B-4B47-B619-C6B680216DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D50240-0B7B-4B47-B619-C6B680216DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D50240-0B7B-4B47-B619-C6B680216DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A422649-9395-4CFF-B71C-8543F7EA8DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A422649-9395-4CFF-B71C-8543F7EA8DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A422649-9395-4CFF-B71C-8543F7EA8DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A422649-9395-4CFF-B71C-8543F7EA8DD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
